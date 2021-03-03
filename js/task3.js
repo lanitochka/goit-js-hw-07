@@ -29,21 +29,9 @@ const images = [
 
 
 
+const ulRef = document.querySelector('#gallery');
 
-images.map(image => {
-  const ulRef = document.querySelector('#gallery');
-  ulRef.insertAdjacentHTML('afterbegin', `<li><img src="${image.url}" alt="${image.alt}" width = '350'></li>`);
-})
+const imagesMod = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width = '350'></li>`).join('');
+ulRef.insertAdjacentHTML('afterbegin', imagesMod);
 
-
-
-
-
-
-
-
-
-
-
-
-
+  
